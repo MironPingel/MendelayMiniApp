@@ -1,21 +1,42 @@
-body {
-	font-family:"Helvetica Neue", Arial, Sans-Serif;text-align:center;
+.research {
+	font-weight: bold;
 }
-#usage {
-	display: block;
+
+p, li {
+	font-family:"Lora", Serif;
+	font-size: 20px;
+	line-height: 1.6;
 }
-#map {
-	margin: 0 auto;
+
+.container {
+	max-width: 920px !important;
 }
-#dev_reset {
-	position: absolute; 
-	top: 0;
-	right: 20px;
+
+h1, h2, h3, h4 {
+	font-family: "Roboto", sans-serif !important;
+	font-weight: 900;
 }
-.credit, .credit a {
-	font-size: 9px; 
-	color: #aaa;
+
+.card-body {
+
 }
-#user_doc_popup {
-	max-width: 200px;
+
+.card-body h2 {
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.card-body h4{
+	margin-top: 20px;
+}
+
+.card-body{
+	font-family:"Lora", Serif;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+#accordion h5 button {
+	color: black;
+	font-size: 18px;
 }

@@ -1,25 +1,103 @@
 <html>
 <head>
-	<title>Mendeley Readership Locations</title>
+	<title>Sessions and Cookies</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="index.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Roboto:900" rel="stylesheet">
+
 </head>
-<body id="sample">
-	<h1>Readership Locations</h1>
-	<div id="usage">
-		<div>Document: 
-			<select id="user_doc_popup"></select>
-		</div>
-		<object id="map" data="world_low.svg" width="1024" height="660" type="image/svg+xml"></object>
-		<p id="dev_reset">
-			<a href="http://localhost:8111/application/">Reset</a>
-		</p>
-		<p class="credit">World Map by 
-			<a href="http://www.amcharts.com">AmCharts</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY 4.0</a>
-		</p>
-	</div>
+<body>
+	
+
+
+
+
+
+
+
+
+<div class="container pt-5">
+<h1 style="font-size: 3.3rem">Sessions and Cookies</h1>
+<h6><b>Group: </b>Kevin, Kristaps, Miron</h4>
+
+<h3 class="pt-5">Topic Description</h3>
+<p class="pt-1 pb-3">
+Data security, also known as information security (IS) or computer security, refers to protective digital privacy measures
+that are applied to prevent unauthorized access to computers, databases and websites.
+<br /> To ensure data security and prepare for and defend against both accidental and intentional unauthorized access, one important
+aspect is confidentiality.
+<br />
+<br /> Confidentiality, in this context, refers to making sure that only the people who are allowed to see and interact with the
+data are in fact able to do so. The technical process of figuring out who the user is, is called authentication. Only after
+the user has been identified can the system display or hide the appropriate content and actions from the user.
+<br /> One approach to this is giving the user some sort of secret. This is usually either a long randomly generated string that
+uniquely identifies them and is known only to them, or simply a password which either the administrator or the user has previously
+defined.
+<br />
+<br /> Since we have worked with authentification many times before, we are quite familiar with this process. There is however one
+important aspect of it, cookies and sessions, which we have very limited knowledge of. There are quite a few unanswered questions,
+such as how do cookies and sessions actually, technically, work. How do they fit together, which part does what etc.
+<br
+/> Furthermore we are quite interested in, whether there are relevant security concerns in using these technologies and what
+those might be.
+<br /> To get a better understanding of these topics we will conduct background research, by searching for and analysing various
+sources.
+<br />
+
+</p>
+
+<h3 class="pt-5">Research Question</h3>
+<p class="research">What role do cookies and sessions play in identifying users of websites or web applications, and what risks can
+their usage pose?</p>
+
+<ul class="subquestions">
+	<li>How are sessions and cookies used to keep a user logged in, even when he/she moves between different pages?</li>
+	<li>How are cookies and sessions relevant, in relation to the HTTP protocol?</li>
+	<li>What are some of the most common security concerns, when using sessions?</li>
+</ul>
+
+<p class="pt-3">
+	 The term cookie refers to a file stored on the client-side which contents can be passed along with an HTTP request. Sessions
+	are, in a way, the counterpart on the server, which store relevant information about a given user during a session/visit
+	without the need for a database or something similar.
+	<br /> The mentioned HTTP protocol is a specific way of transferring files on the web and is how the server and the clients commonly communicate with one another.
+	<br />
+
+</p>
+
+<h4 class="mt-5 pb-1">Sources</h4>
+<div id="accordion" class="mb-5">
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="/dist/standalone.js"></script>
+	<script src="src/sources.js"></script>
 	<script type="text/javascript" src="./main.min.js"></script>
 	<script type="text/javascript" src="./oauth-config.js"></script>
 	<script type="text/javascript">
@@ -29,13 +107,14 @@
             if (typeof window.oauthImplicitGrantConfig === 'object') {
             	MendeleySDK.API.setAuthFlow(MendeleySDK.Auth.implicitGrantFlow(window.oauthImplicitGrantConfig));
             	$(document).ready(getDocuments);
-            	$("#user_doc_popup").on("change", getCatalog);
+            	// $("#user_doc_popup").on("change", getCatalog);
             } else {
             	console.log("something is wrong");
             }
-            
-            
         });
 	</script>	
 </body>	
 </html>
+
+
+
